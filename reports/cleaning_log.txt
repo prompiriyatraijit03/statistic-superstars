@@ -1,0 +1,21 @@
+DATA CLEANING LOG
+==================================================
+
+[OK] Removed 723 duplicate rows
+[OK] Converted 'target' to categorical
+[OK] Converted 'sex' to categorical
+[OK] Converted 'cp' to categorical
+[OK] Converted 'fbs' to categorical
+[OK] Converted 'restecg' to categorical
+[OK] Converted 'exang' to categorical
+[OK] Converted 'slope' to categorical
+[OK] Converted 'ca' to categorical
+[OK] Converted 'thal' to categorical
+[OK] Capped 9 outliers in 'trestbps' to [90.00, 170.00]
+[OK] Capped 5 outliers in 'chol' to [115.38, 370.38]
+[OK] Capped 1 outliers in 'thalach' to [84.12, 215.12]
+[OK] Capped 5 outliers in 'oldpeak' to [-2.40, 4.00]
+[OK] Added 'hr_reserve' (estimated max HR [220-age] minus achieved max HR)
+[OK] Added 'chol_age_ratio' (cholesterol relative to age)
+
+Final shape: (302, 16)
