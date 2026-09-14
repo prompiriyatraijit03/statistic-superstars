@@ -1,9 +1,9 @@
 # Statistics Superstars
 
 ## Team Members
-- Student A (Nyi Min Satt) - Project Lead & Data Curator
-- Student B (Lappawat Mahawong) - Statistical Analyst
-- Student C (ZONGTING LI) - Visualization Specialist
+- Student A (Prompiriya Traijit) - Project Lead & Data Curator
+- Student B (Min Thaw Chan) - Statistical Analyst
+- Student C (Aung Kyaw Phyo) - Visualization Specialist
 
 ## Project Overview
 A multi-week statistical analysis of the **Heart Disease** dataset. Week 1 covers
