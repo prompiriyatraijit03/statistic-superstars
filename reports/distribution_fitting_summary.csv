@@ -1,0 +1,8 @@
+column,best_fit,p_value,good_fit
+age,Gamma,0.03098917205673324,False
+trestbps,Gamma,0.1545687540151962,True
+chol,Gamma,0.9773468819754062,True
+thalach,Gamma,0.03709886841122323,False
+oldpeak,Uniform,1.1052140400576687e-34,False
+hr_reserve,Gamma,0.38709100391942175,True
+chol_age_ratio,Gamma,0.7942180936169322,True

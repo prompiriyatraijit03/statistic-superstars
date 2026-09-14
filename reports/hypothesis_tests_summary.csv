@@ -1,0 +1,8 @@
+Test,Variable 1,Variable 2,Statistic,P-value,Significant
+One-sample t-test,chol,200 (threshold),16.6061164481349,2.0659240814368473e-44,True
+Independent t-test,thalach,target,-7.921881165093883,6.021018554946477e-14,True
+Independent t-test,oldpeak,target,8.070717100633548,4.192515895774662e-14,True
+One-way ANOVA,thalach,cp,17.662977824744186,1.4028543183940334e-10,True
+One-way ANOVA,chol,cp,0.8063198637698227,0.4911768775829972,False
+Chi-square,target,sex,23.083879459669042,1.5508552054949547e-06,True
+Chi-square,target,exang,55.45620298199192,9.556466486179178e-14,True
