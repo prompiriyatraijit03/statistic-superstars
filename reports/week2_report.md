@@ -132,27 +132,21 @@
 - None of the continuous variables are normally distributed, so the ANOVA and t-test results (which assume approximately normal data, or rely on the Central Limit Theorem for large samples) should be treated as a useful first pass rather than the final word - a Week 3 follow-up with non-parametric equivalents (Mann-Whitney U, Kruskal-Wallis) would be a good robustness check.
 - Sex, chest pain type, and diagnosis are all associated with each other; we have not controlled for these overlapping relationships, so we can't yet say which variable is the true driver of any given association (a confounding risk).
 
-### 5.3 Recommendations for Week 3
-
-- Highlight the `thalach`/`oldpeak`-by-diagnosis comparison and the `target`-by-`exang` relationship, since these were our strongest and most interpretable findings.
-- Consider a simple logistic regression or decision tree on `target` for a dashboard feature, using `thalach`, `oldpeak`, `exang`, and `cp` as predictors, since these showed the clearest statistical relationships this week.
-- Add a non-parametric cross-check (Mann-Whitney U in place of the independent t-tests) given that none of our variables are normally distributed.
-
 ---
 
 ## 6. Team Contributions
 
 | Team Member | Tasks Completed | Hours |
 |-------------|-----------------|-------|
-| Student A (Nyi Min Satt) | Repository updates, Week 2 report structure, environment checks | 2 |
-| Student B (Lappawat Mahawong) | Statistics module, all hypothesis tests, distribution fitting, confidence intervals | 8 |
-| Student C (ZONGTING LI) | Distribution and confidence interval visualizations | 3 |
+| Student A (Prompiriya Traijit) | Repository updates, Week 2 report structure, environment checks | 2 |
+| Student B (Min Thaw Chan) | Statistics module, all hypothesis tests, distribution fitting, confidence intervals | 8 |
+| Student C (Aung Kyaw Phyo) | Distribution and confidence interval visualizations | 3 |
 
 ---
 
 ## Appendix
 
-**Files Generated:**
+**Files:**
 - `src/statistics.py`
 - `reports/hypothesis_tests_summary.csv`
 - `reports/distribution_fitting_summary.csv`
