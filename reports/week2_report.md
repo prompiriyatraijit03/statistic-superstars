@@ -139,7 +139,7 @@
 | Team Member | Tasks Completed | Hours |
 |-------------|-----------------|-------|
 | Student A (Prompiriya Traijit) | Repository updates, Week 2 report structure, environment checks | 2 |
-| Student B (Min Thaw Chan) | Statistics module, all hypothesis tests, distribution fitting, confidence intervals | 8 |
+| Student B (Min Thaw Chan) | Statistics module, all hypothesis tests, distribution fitting, confidence intervals | 6 |
 | Student C (Aung Kyaw Phyo) | Distribution and confidence interval visualizations | 3 |
 
 ---
