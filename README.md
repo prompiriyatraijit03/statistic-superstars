@@ -9,8 +9,10 @@
 A multi-week statistical analysis of the **Heart Disease** dataset. Week 1 covers
 data inspection, cleaning, descriptive statistics, and visualization. Week 2 builds
 on the cleaned data with hypothesis testing, distribution fitting, and confidence
-intervals, to understand which clinical measurements are associated with a heart
-disease diagnosis.
+intervals. Week 3 turns that analysis into a reusable plotting module and an
+interactive Streamlit dashboard, backed by unit tests - to understand, and let
+others explore, which clinical measurements are associated with a heart disease
+diagnosis.
 
 ## Dataset
 **Heart Disease Dataset** (processed Cleveland data), sourced from the
@@ -30,11 +32,17 @@ data/
   processed/    raw_data.csv (loaded) and cleaned_data.csv (post-cleaning)
 notebooks/      00-03: Week 1 (inspection, cleaning, statistics, visualizations)
                 04-06: Week 2 (hypothesis testing, distribution fitting, confidence intervals)
-reports/        Generated tables, figures, and the Week 1 & Week 2 reports
+                07:    Week 3 (visualization module demo)
+reports/        Generated tables, figures, and the Week 1, 2 & 3 reports
 scripts/        download_data.py - loads the dataset into data/processed
 src/            data_loader.py - Week 1 loading/inspection utilities
                 statistics.py - Week 2 StatisticalAnalyzer (t-tests, ANOVA,
                 chi-square, confidence intervals, bootstrap, distribution fitting)
+                visualizations.py - Week 3 plotting functions (histogram +
+                fitted distribution, correlation heatmap, boxplots by
+                category, interactive scatter, Q-Q plot, dashboard layout)
+dashboard/      app.py - Week 3 Streamlit dashboard
+tests/          test_statistics.py, test_visualizations.py - unit tests (pytest)
 ```
 
 ## Setup Instructions
@@ -58,13 +66,22 @@ jupyter notebook notebooks/03_exploratory_visualizations.ipynb
 jupyter notebook notebooks/04_hypothesis_testing.ipynb
 jupyter notebook notebooks/05_distribution_fitting.ipynb
 jupyter notebook notebooks/06_confidence_intervals.ipynb
+
+# Week 3 (uses the same cleaned data + src/statistics.py from Week 2)
+jupyter notebook notebooks/07_visualization_dashboard.ipynb
+streamlit run dashboard/app.py
 ```
 
-**Note on notebook numbering:** the Week 2 assignment sheet's example code
-refers to its notebooks as `02`-`04`, but this repo already uses `02` and `03`
-for Week 1. Since Week 1 and Week 2 live in the same project, we numbered the
-Week 2 notebooks `04`-`06` instead, so the whole sequence still runs in order
-without overwriting Week 1 work.
+Run the test suite any time with:
+```bash
+pytest tests/ -v
+```
+
+**Note on notebook numbering:** the assignment sheets' example code refers to
+Week 2's notebooks as `02`-`04` and Week 3's as `01`-`03`, but this repo
+already uses `00`-`03` for Week 1. Since all weeks live in the same project,
+we numbered them continuously instead - Week 2 is `04`-`06`, Week 3 is `07` -
+so the whole sequence still runs in order without overwriting earlier work.
 
 ## Key Findings
 
@@ -80,3 +97,9 @@ the association between diagnosis and both sex and exercise-induced angina
 chest pain types (ANOVA, p < 0.0001). Cholesterol is well described by a Gamma
 distribution; traditional and bootstrap 95% confidence intervals agree closely
 for every numeric variable.
+
+**Week 3** (`reports/week3_report.md`): all of the above is now available as an
+interactive Streamlit dashboard (`dashboard/app.py`) with three tabs -
+Overview, Distributions, and Hypothesis Testing - plus a reusable plotting
+module (`src/visualizations.py`) and a unit test suite (`tests/`) covering
+both the statistics and visualization code.
