@@ -74,7 +74,14 @@ def plot_histogram_with_distribution(
         params = dist.fit(arr)
         x = np.linspace(arr.min(), arr.max(), 200)
         pdf = dist.pdf(x, *params)
-        ks_stat, p_value = stats.kstest(arr, dist.name, args=params)
+
+        # Freeze the fitted distribution before running the KS test.
+        # This avoids passing fitted parameters through kstest's `args`,
+        # which can cause errors such as:
+        # TypeError: ndtr() takes from 1 to 2 positional arguments but 3 were given
+        fitted_dist = dist(*params)
+        ks_stat, p_value = stats.kstest(arr, fitted_dist.cdf)
+
         ax.plot(x, pdf, color='#E4572E', linewidth=2,
                 label=f'{distribution.title()} fit (p={p_value:.3f})')
 
